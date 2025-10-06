@@ -36,13 +36,15 @@
     transform: rotate(360deg);
   }
 }
+/* Body background */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  background-color: wheat; /* your chosen background */
   color: #333;
 }
 
+/* Container for all columns */
 .container {
   display: flex;
   justify-content: space-around;
@@ -52,56 +54,67 @@ body {
   flex-wrap: wrap; /* responsive for small screens */
 }
 
+/* Each column as a card */
 .column {
   flex: 1;
   min-width: 300px;
   max-width: 400px;
-  background-color: white;
-  border-radius: 10px;
+  background-color: #fff8dc; /* lighter wheat / cream card */
+  border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for columns */
+.column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
 h1, h2 {
-  color: #0070f3;
+  color: #d2691e; /* chocolate color for contrast */
+  margin-bottom: 15px;
 }
 
+/* Profile picture */
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 3px solid #0070f3;
+  border: 3px solid #d2691e; /* same as headings */
 }
 
+/* Lists */
 ul {
   list-style-type: disc;
   padding-left: 20px;
 }
 
+/* Paragraphs */
 p {
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.contact-section {
-  margin-top: 30px;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 15px;
-}
-
+/* Contact links */
 .contact-section a {
-  color: #0070f3;
+  color: #d2691e;
   text-decoration: none;
   font-weight: bold;
 }
 
 .contact-section a:hover {
   text-decoration: underline;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
